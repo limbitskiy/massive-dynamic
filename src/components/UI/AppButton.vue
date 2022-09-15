@@ -13,7 +13,7 @@ const styleTypes: Styles = {
 }
 
 const sizes: Styles = {
-    normal: 'text-base',
+    normal: 'text-xl',
     big: 'text-4xl',
 }
 

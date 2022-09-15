@@ -1,5 +1,5 @@
 <template lang="pug">
-.section.w-full.py-8.px-14(:style="{ backgroundColor: color }")    
+.container.w-full(:style="{ backgroundColor: color }")
     slot
 </template>
 
