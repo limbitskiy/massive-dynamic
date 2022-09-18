@@ -1,13 +1,13 @@
 import AppButton from './AppButton.vue'
 import AppIcon from './AppIcon.vue';
 import AppLink from './AppLink.vue';
-import AppLogo from './AppLogo.vue';
 import AppSection from './AppSection.vue';
 import AppSplit from './AppSplit.vue';
 import TextBlock from './TextBlock.vue';
 import AppPill from './AppPill.vue';
 import AppContainer from './AppContainer.vue';
 import AppSVG from './AppSVG.vue';
+import AppPicture from './AppPicture.vue';
 
 export const UIComponents = [ 
     {
@@ -21,10 +21,6 @@ export const UIComponents = [
     {
         name: "AppLink",
         component: AppLink
-    },
-    {
-        name: "AppLogo",
-        component: AppLogo
     },
     {
         name: "AppSection",
@@ -49,5 +45,9 @@ export const UIComponents = [
     {
         name: "AppSVG",
         component: AppSVG
+    },
+    {
+        name: "AppPicture",
+        component: AppPicture
     },
 ]

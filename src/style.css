@@ -28,7 +28,7 @@
 }
 
 body {
-  /* background-color: #121315; */
+  background-color: #121315;
   color: #9E9DA3;
   min-height: 100vh;
 }
@@ -37,6 +37,34 @@ body {
   overflow: hidden;
 }
 
+.h1 {
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.25;
+  font-size: clamp(30px, 4vw, 72px); 
+}
+
+.h3 {
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.4;
+  font-size: clamp(22px, 4vw, 38px);
+  margin-bottom: 1rem;
+}
+
+.inner-padding {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .inner-padding {
+    padding: 3rem;
+  }
+}
+
+.pill {
+  max-width: 100%;
+}
 /* a {
   font-weight: 500;
   color: #646cff;
@@ -86,6 +114,7 @@ button:focus-visible {
 
 #app {
   max-width: 1920px;
+  margin-inline: auto;
   
   /* padding: 2rem; */
   /* text-align: center; */
