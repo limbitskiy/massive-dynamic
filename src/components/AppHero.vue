@@ -8,7 +8,7 @@
             h1.h1 {{$t('hero main text')}}
             div.my-4(class="lg:flex lg:flex-row-reverse lg:gap-8 lg:mt-8")
                 p {{ $t('hero sub text') }}
-                AppButton.mt-4(type="primary" action="www.youtube.com")
+                AppButton.mt-4(type="primary" action="pricing")
                     p.text-2xl(class="lg:text-4xl") {{ $t('hero button') }}
         .outer-wrap.w-full.flex.justify-end.hidden.flex-1(class="md:flex")
             .svg-wrap.flex.flex-col.justify-end.w-full

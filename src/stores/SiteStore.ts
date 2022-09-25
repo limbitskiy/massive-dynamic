@@ -5,8 +5,8 @@ export const useSiteStore = defineStore('SiteStore', () => {
     const navLinks = ref([
         {
             id: 0,
-            text: 'Features',
-            href: '/features'
+            text: 'Home',
+            href: '/'
         },
         {
             id: 1,
@@ -15,11 +15,6 @@ export const useSiteStore = defineStore('SiteStore', () => {
         },
         {
             id: 2,
-            text: 'Download',
-            href: '/download'
-        },
-        {
-            id: 3,
             text: 'Support',
             href: '/support'
         },
@@ -47,7 +42,7 @@ export const useSiteStore = defineStore('SiteStore', () => {
                 size: ["25px", "25px"],
                 color: "grey"
             },
-        ])
+    ])
 
-return {navLinks, socialIcons}
+return { navLinks, socialIcons }
 })

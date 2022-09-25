@@ -4,9 +4,6 @@ import AppLink from './AppLink.vue';
 import AppSection from './AppSection.vue';
 import AppSplit from './AppSplit.vue';
 import TextBlock from './TextBlock.vue';
-import AppPill from './AppPill.vue';
-import AppContainer from './AppContainer.vue';
-import AppSVG from './AppSVG.vue';
 import AppPicture from './AppPicture.vue';
 
 export const UIComponents = [ 
@@ -33,18 +30,6 @@ export const UIComponents = [
     {
         name: "TextBlock",
         component: TextBlock
-    },
-    {
-        name: "AppPill",
-        component: AppPill
-    },
-    {
-        name: "AppContainer",
-        component: AppContainer
-    },
-    {
-        name: "AppSVG",
-        component: AppSVG
     },
     {
         name: "AppPicture",

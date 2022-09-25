@@ -5,11 +5,15 @@ button.font-medium.rounded-xl.px-6.py-4.whitespace-nowrap(:class="currentStyle, 
 
 <script setup lang="ts">
 import { computed } from 'vue';
+import { useRouter } from 'vue-router';
 import type { Styles } from '../../types'
+
+const router = useRouter()
 
 const styleTypes: Styles = {
     primary: 'bg-md-accent text-black',
-    secondary: 'bg-md-accent'
+    secondary: 'bg-md-grey',
+    inactive: 'hover:text-white',
 }
 
 const sizes: Styles = {
@@ -32,5 +36,18 @@ const props = defineProps({
 const currentStyle = computed(() => styleTypes[props.type])
 const currentSize = computed(() => sizes[props.size])
 
-const clickAction = () => console.log(`Going to: ${props.action}`)
+const clickAction = () => {
+    if (typeof props.action === 'undefined') return
+    if (props.action[0] === '#') {
+        const link = props.action?.slice(1)
+        const html = document.querySelector('html')
+        html!.classList.add('scroll-smooth')
+        setTimeout(() => {
+            html!.classList.remove('scroll-smooth')
+        }, 1000)
+        document.getElementById(link!)!.scrollIntoView();
+    } else {
+        router.push(props.action)
+    }
+}
 </script>
