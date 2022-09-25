@@ -6,8 +6,6 @@ div(:style="{ width: `${width}`, height: `${height}`, maxWidth: `${maxWidth}`, m
     height="100%"
     :viewBox="`0 0 ${icons[name].width} ${icons[name].height}`"
     fill="none" xmlns="http://www.w3.org/2000/svg"
-    :class="{logo: props.name === 'logoGrey'}"
-    @click="clickMethod"
     )
 
     path(
@@ -18,9 +16,6 @@ div(:style="{ width: `${width}`, height: `${height}`, maxWidth: `${maxWidth}`, m
     )
 </template>
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
-
-const router = useRouter()
 
 type Icon = {
   [a: string]: { width: number, height: number, paths: Path[] }
@@ -32,7 +27,7 @@ type Path = {
   fill?: string
 }
 
-const props = defineProps({
+defineProps({
   name: {
     type: String
   },
@@ -57,10 +52,6 @@ const props = defineProps({
     default: '',
   },
 });
-
-const clickMethod = () => {
-  props.name === 'logoGrey' ? router.push({ name: 'Home' }) : props.name
-}
 
 const icons: Icon = {
   keyboard: {

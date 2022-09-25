@@ -1,5 +1,5 @@
 <template lang="pug">
-button.font-medium.rounded-xl.px-6.py-4.whitespace-nowrap(:class="currentStyle, currentSize" @click="clickAction")
+button.font-medium.rounded-xl.whitespace-nowrap(:class="currentStyle, currentSize" @click="clickAction")
     slot
 </template>
 
@@ -11,14 +11,14 @@ import type { Styles } from '../../types'
 const router = useRouter()
 
 const styleTypes: Styles = {
-    primary: 'bg-md-accent text-black',
+    primary: 'bg-md-accent text-black app-button',
     secondary: 'bg-md-grey',
     inactive: 'hover:text-white',
 }
 
 const sizes: Styles = {
-    normal: 'text-xl',
-    big: 'text-4xl',
+    normal: 'text-xl px-6 py-4',
+    big: 'text-5xl px-8 py-6',
 }
 
 const props = defineProps({

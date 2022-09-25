@@ -1,8 +1,7 @@
 <template lang="pug">
 .nav.bg-md-grey.flex.items-center.justify-between.px-10.h-24(class="lg:h-32")
     AppIcon(name="logoGrey" width="80px" height="80px")
-    .links.hidden.gap-16(class="lg:flex lg:ml-16")
-        router-link.text-xl(v-for="link in navLinks" :to="link.href") {{ link.text }}
+    AppNavigation(class="lg:ml-16")
     .btn-wrap.hidden(class="lg:flex lg:items-center lg:gap-4")
         LocaleSwitcher
         AppButton(type="primary" action="www.google.com") 
@@ -21,11 +20,13 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { storeToRefs } from 'pinia'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { useSiteStore } from './../stores/SiteStore';
 import LocaleSwitcher from './LocaleSwitcher.vue';
+import AppNavigation from './AppNavigation.vue';
 
 const router = useRouter()
+const route = useRoute()
 
 const store = useSiteStore();
 const { navLinks } = storeToRefs(store)
